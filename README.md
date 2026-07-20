@@ -8,3 +8,6 @@ Internal treasury & multi-sig wallet backend for Ourano Finance.
 - Deployed on our k8s cluster (AWS ap-northeast-1)
 
 ⚠️ Internal service — do not distribute.
+
+## Ops note (2026-07-20)
+Removed hardcoded env vars from Dockerfile after internal review — use secrets manager.
