@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: treasury-service
+  namespace: finance-prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels: {app: treasury-service}
+  template:
+    metadata:
+      labels: {app: treasury-service}
+    spec:
+      containers:
+      - name: api
+        image: ghcr.io/ourano/treasury-service:1.4.2
+        ports: [{containerPort: 8000}]
+        envFrom:
+        - secretRef: {name: treasury-secrets}
