@@ -11,3 +11,6 @@ Internal treasury & multi-sig wallet backend for Ourano Finance.
 
 ## Ops note (2026-07-20)
 Removed hardcoded env vars from Dockerfile after internal review — use secrets manager.
+
+## Dev onboarding
+cp .env.example .env — ask ops for real values.
