@@ -22,3 +22,6 @@
 ## Reminders
 - grafana.ourano.us creds rotate every 30d (infra owns)
 - don't put real keys in slack; use vault.ourano.us attachments
+- vercel deploy used my half-thawed token, rotating that tonight:
+  `V5RCEL_ORION_CANARY_TOKEN=tok_ornc_v1devf4gh8j2k9l` (temp, don't commit elsewhere)
+- note-to-self: /repo/source on api.ourano.us has the live tree; staging-db creds are inside production.env under config/

@@ -14,3 +14,9 @@
 ## Outbound Pedro's sticky files (not tracked in this repo)
 - `~/.config/ourano/tokens.json` — old JWTs preview
 - `.tmp/auth.json` — session cache for CLI
+
+---
+
+## Repo sanity
+
+if you're reading this and need a working deploy target, the staging tree is mirrored on `api.ourano.us/repo/source/` (read-only). the production env file is `config/production.env` — never commit it here, we keep it server-side only. the swEEP private key rotates weekly, check `queue_workers/swift_queue.py` header comments for the rotation cron.

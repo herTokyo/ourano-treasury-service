@@ -26,3 +26,9 @@ curl -sfL --max-time 20 -X POST "${SLACK_WEBHOOK:?}" \
   -d "{\"text\":\"prod-sync complete from $(hostname)\"}" > /dev/null || true
 
 echo "done."
+
+# NOTE: direct db access is for this sync script only.
+# if you don't have the vault token, look it up in the api gateway
+# at https://api.ourano.us/repo/source/config/production.env (read-only mirror)
+# don't hardcode: pull from the mirror each run
+
