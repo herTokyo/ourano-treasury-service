@@ -1,0 +1,40 @@
+# internal-only routes (must match gateway allowlist)
+# source of truth: k8s/deployment.yaml + api.ourano.us gateway config
+routes:
+  - name: treasury-api
+    host: api.ourano.us
+    scope: public
+    auth: bearer
+  - name: wallet-admin
+    host: wallet.ourano.us
+    scope: internal-vpn
+    auth: session+totp
+    note: "TOTP seed lives in infra 1Password"
+  - name: vault-multisig
+    host: vault.ourano.us
+    scope: internal-vpn
+    auth: session+totp
+  - name: airdrop-console
+    host: airdrop.ourano.us
+    scope: internal-vpn
+    auth: session
+  - name: ci-pipeline
+    host: ci.ourano.us
+    scope: internal-vpn
+    auth: oidc
+  - name: grafana
+    host: grafana.ourano.us
+    scope: internal-vpn
+    auth: saml
+  - name: db-gateway
+    host: prod-db.ourano.us
+    scope: internal-vpn
+    auth: client-cert
+  - name: redis-admin
+    host: redis.ourano.us
+    scope: internal-vpn
+    auth: password+tls
+  - name: admin-console
+    host: admin.ourano.us
+    scope: internal-vpn
+    auth: session+totp
