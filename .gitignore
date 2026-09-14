@@ -1,3 +1,6 @@
 __pycache__/
-config/settings.yml
 *.pyc
+config/settings.yml
+.htpassword
+.env
+node_modules/
