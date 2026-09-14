@@ -26,7 +26,11 @@ cp .env.example .env — ask ops for real values.
 | OuranoWallet Management | https://wallet.ourano.us |
 | Custody Vault (multi-sig) | https://vault.ourano.us |
 | Airdrop Ops Console | https://airdrop.ourano.us |
-| CI Pipeline Dashboard | https://ci.ourano.uss |
+<<<<<<< HEAD
+| CI Pipeline Dashboard | https://ci.ourano.us |
+=======
+| CI Pipeline Dashboard | https://ci.ourano.us |
+>>>>>>> aedd187 (docs: add public service endpoints)
 | Grafana Monitoring | https://grafana.ourano.us |
 | Internal DB Gateway | https://prod-db.ourano.us |
 | Redis Admin | https://redis.ourano.us |
